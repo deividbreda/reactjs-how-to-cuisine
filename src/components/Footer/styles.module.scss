@@ -1,0 +1,95 @@
+.content {
+    background: #c76d03;
+    padding: 50px 0 80px 0;
+
+    .allFooter {
+        display: flex;
+        justify-content: space-between;
+
+        .info {
+
+            .imgLogo {
+                width: 280px;
+            }
+
+            p {
+                color: #fff;
+                font-size: 22px;
+                margin-top: 16px;
+            }
+
+            button {
+                margin-top: 32px;
+                background: #f8c410;
+                border: none;
+                border-radius: 30px;
+                padding: 8px 46px;
+                width: 100%;
+                font-size: 22px;
+                text-transform: uppercase;
+
+                transition: all .3s;
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+
+            .social {
+                margin-top: 32px;
+                display: flex;
+                gap: 32px;
+
+                a {
+                    color: #ffca13;
+                    font-size: 36px;
+                }
+            }
+        }
+
+        .links {
+
+            h1 {
+                color: #ffca13;
+                text-align: right;
+                font-weight: 600;
+            }
+
+            li {
+                list-style: none;
+                text-align: right;
+                margin: 10px 0;
+
+                &:first-child {
+                    margin-top: 30px;
+                }
+
+                a {
+                    color: #fff;
+                    font-size: 22px;
+                    font-weight: 300;
+
+                    transition: all .3s;
+
+                    &:hover {
+                        color: #f7c310;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        background: #bd6702;
+        border-radius: 100px;
+        padding: 28px 46px;
+        margin-top: 50px;
+        display: flex;
+        gap: 16px;
+        justify-content: space-between;
+
+        span, a {
+            color: #ff8a00;
+        }
+    }
+}
