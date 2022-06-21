@@ -1,0 +1,42 @@
+.featured {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 64px 0;
+    gap: 32px;
+
+    .text {
+        width: 40%;
+
+        h1 {
+            font-size: 40px;
+            
+            span {
+                color: #f7c310;
+                text-transform: uppercase;
+            }
+        }
+
+        p {
+            margin-top: 16px;
+            font-size: 20px;
+
+            b {
+                color: #c76d03;
+            }
+        }
+
+        button {
+            margin-top: 28px;
+            background: #f7c310;
+            border: none;
+            border-radius: 30px;
+            padding: 12px;
+            width: 100%;
+        }
+    }
+
+    img {
+        width: 50%;
+    }
+}
