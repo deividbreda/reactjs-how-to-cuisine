@@ -1,0 +1,62 @@
+.cabecalho {
+    background: #ffc400;
+    padding: 16px 0;
+
+    @media(min-width: 728px) {
+        .allCabecalho {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            justify-content: space-between;
+    
+            .imgLogo {
+                width: 280px;
+            }
+
+            .pesquisa {
+                background: #fff;
+                border-radius: 30px;
+                padding: 12px 16px;
+                position: relative;
+                width: 42%;
+
+                input {
+                    background: transparent;
+                    border: none;
+                    width: 90%;
+                }
+
+                button {
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    color: #fff;
+                    background: #c76d03;
+                    border: none;
+                    border-radius: 100px;
+                    padding: 11px;
+                    display: flex;
+                    font-size: 16px;
+                }
+            }
+
+            a {
+                background: #fff;
+                border-radius: 30px;
+                padding: 12px 8px;
+                width: 150px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 16px;
+
+                transition:  all .3s;
+
+                &:hover {
+                    background: #c76d03;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

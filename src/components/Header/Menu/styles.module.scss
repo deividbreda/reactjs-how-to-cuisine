@@ -1,0 +1,19 @@
+.content {
+    border-bottom: 1px solid #e2e2e2;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 24px 0;
+
+        a {
+
+            transition: all .3s;
+
+            &:hover {
+                color: #c76d03;
+            }
+        }
+    }
+}
