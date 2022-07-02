@@ -1,0 +1,26 @@
+.options {
+    
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        
+        width: 100%;
+        padding: 12px;
+        border-radius: 30px;
+        border: none;
+        background: #e6e6e6;
+        margin-bottom: 12px;
+
+        &:first-child {
+            margin-top: 32px;
+        }
+
+        transition:  all .3s;
+
+        &:hover {
+            background: #ffc400;
+        }
+    }
+}

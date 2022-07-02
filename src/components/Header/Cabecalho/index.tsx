@@ -1,6 +1,7 @@
 import styles from './styles.module.scss'
 
-import { FaSearch, FaSignInAlt } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { BotaoEntrar } from './BotaoEntrar';
 
 export function Cabecalho(){
     return (
@@ -15,7 +16,7 @@ export function Cabecalho(){
                             <button> {<FaSearch />} </button>
                         </div>
                                       
-                        <a> ENTRAR {<FaSignInAlt />}</a>
+                        <BotaoEntrar />
                     </div>
                 </div>
             </header>

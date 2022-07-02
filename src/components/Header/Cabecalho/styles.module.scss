@@ -56,6 +56,15 @@
                     background: #c76d03;
                     color: #fff;
                 }
+
+                &.logado {
+                    background: #c76d03;
+                    color: #fff;
+
+                    &:hover {
+                        background: #9d5503;
+                    }
+                }
             }
         }
     }
