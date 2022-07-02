@@ -81,18 +81,37 @@
                 right: 0;
                 padding: 30px;
                 border-radius: 4px;
+
+                span {
+                    background: #a9a9a9ad;
+                    color: #d8d8d8;
+                    padding: 4px 8px;
+                    border-radius: 30px;
+                    font-size: 14px;
+
+                    transition: all .3s;
+
+                    &:hover {
+                        background: #f7c310;
+                        color: #000;
+                    }
+                }
                 
                 h2 {
                     color: #fff;
                     font-size: 30px;
                     font-weight: 600;
+                    margin-top: 12px;
                 }
 
                 time {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
                     position: absolute;
                     font-size: 19px;
                     bottom: 32px;
-                    color: rgb(200, 200, 200);
+                    color: #afafafa0;
                 }
             }
         }        
@@ -105,11 +124,12 @@
         .massa {
             box-shadow: 0 0 50px rgb(0 0 0 / 10%);
             width: 33%;
+            position: relative;
 
             transition: all .3s;
 
             &:hover {
-                margin-top: -10px;
+                transform: translateY(-5px);
             }
 
             img {
@@ -118,6 +138,23 @@
                 max-width: 100%;
                 object-fit: cover;
                 border-radius: 4px 4px 0 0;
+            }
+
+            span {
+                position: absolute;
+                left: 12px;
+                top: 12px;
+                padding: 4px 12px;
+                border-radius: 30px;
+                background: #a9a9a9ad;
+                color: #d8d8d8;
+
+                transition: all .3s;
+
+                &:hover {
+                    background: #f7c310;
+                    color: #000;
+                }
             }
 
             .textoMassa {
@@ -133,8 +170,14 @@
 
                 time {
                     position: absolute;
-                    bottom: 16px;
-                    color: #9f9f9f;
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    bottom: 18px;
+                    color: #a97711;
+                    background: #f7c310;
+                    padding: 0 8px;
+                    border-radius: 30px;
                 }
             }
         }
@@ -175,6 +218,23 @@
                 right: 0;
                 padding: 16px;
                 transition: all .5s;
+
+                span {
+                    position: absolute;
+                    top: 16px;
+                    left: 12px;
+                    padding: 4px 12px;
+                    border-radius: 30px;
+                    background: #a9a9a9ad;
+                    color: #d8d8d8;
+
+                    transition: all .3s;
+
+                    &:hover {
+                        background: #f7c310;
+                        color: #000;
+                    }
+                }
 
                 h1 {
                     font-size: 24px;
