@@ -1,8 +1,18 @@
+import { GetStaticProps } from 'next'
 import Head from 'next/head'
+import { BotaoAssinar } from '../components/Homepage/BotaoAssinar'
+import { stripe } from '../services/stripe'
 
 import styles from './styles.module.scss'
 
-export default function Home() {
+interface HomeProps {
+  produto: {
+    priceId: string,
+    preco: number,
+  }
+}
+
+export default function Home({ produto }: HomeProps) {
   return(
     <>
       <Head> 
@@ -13,8 +23,8 @@ export default function Home() {
         <div className={styles.featured}>
           <div className={styles.text}>
             <h1> As melhores <span> receitas </span> da internet estão aqui! </h1>
-            <p> Assine por apenas <b> R$ 9,90 </b> e tenha acesso a todas as receitas! </p>
-            <button> ASSINAR </button>
+            <p> Assine por apenas <b> {produto.preco} </b> e tenha acesso a todas as receitas! </p>
+            <BotaoAssinar />
           </div>
           <img src="/images/cartoonchef.png" alt="" />
         </div>
@@ -122,4 +132,23 @@ export default function Home() {
       </div>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  const price = await stripe.prices.retrieve('price_1LGpgaIwAI4l91H0BX786OkY');
+
+  const produto = {
+    priceId: price.id,
+    preco: new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    }).format(price.unit_amount / 100),
+  }
+
+  return {
+    props: {
+      produto,
+    },
+    revalidate: 60 * 60 * 24 // 24 horas
+  }
 }
