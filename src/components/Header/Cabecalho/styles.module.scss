@@ -40,29 +40,32 @@
                 }
             }
 
-            a {
-                background: #fff;
-                border-radius: 30px;
-                padding: 12px 8px;
-                width: 150px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 16px;
+            .botao {
 
-                transition:  all .3s;
-
-                &:hover {
-                    background: #c76d03;
-                    color: #fff;
-                }
-
-                &.logado {
-                    background: #c76d03;
-                    color: #fff;
-
+                a {
+                    background: #fff;
+                    border-radius: 30px;
+                    padding: 12px 8px;
+                    width: 150px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 16px;
+    
+                    transition:  all .3s;
+    
                     &:hover {
-                        background: #9d5503;
+                        background: #c76d03;
+                        color: #fff;
+                    }
+    
+                    &.logado {
+                        background: #c76d03;
+                        color: #fff;
+    
+                        &:hover {
+                            background: #9d5503;
+                        }
                     }
                 }
             }

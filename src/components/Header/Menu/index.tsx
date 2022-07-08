@@ -1,3 +1,4 @@
+import { Links } from './Links';
 import styles from './styles.module.scss'
 
 export function Menu(){
@@ -6,10 +7,7 @@ export function Menu(){
             <div className={styles.content}>
                 <div className="containerWidth">
                     <nav>
-                        <a href=""> Doces</a>
-                        <a href=""> Massas</a>
-                        <a href=""> Saladas</a>
-                        <a href=""> Carnes </a>
+                        <Links />
                     </nav>
                 </div>
             </div>
