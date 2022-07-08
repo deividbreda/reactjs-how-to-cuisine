@@ -1,0 +1,203 @@
+.categoryFeatured {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+    
+    img {
+       width: 100%; 
+    }
+
+    .cover {
+        background: rgba(0, 0, 0, 0.637);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        
+        h1 {
+            text-align: center;
+            color: #f7c310;
+            font-weight: normal;
+            font-size: 42px;
+        }
+    }
+}
+
+.conteudo {
+    padding: 60px 0;
+    max-width: 890px;
+    margin: 0 auto;
+    width: 100%;
+
+    .links {
+        border-radius: 10px 10px 0 0;
+        display: inline-flex;
+        gap: 32px;
+        background: #f7c310;
+        box-shadow: 0 0 50px rgb(0 0 0 / 8%);
+        padding: 8px 32px;
+
+        li {
+            color: #ffa301;
+            list-style: circle;
+            font-weight: normal;
+
+            transition: all .3s;
+
+            &:hover {
+               color: #c76d03; 
+               list-style: unset;
+            }
+        }
+
+        .active {
+            color: #c76d03;
+            font-weight: 600;
+            list-style: unset;
+        }
+    }
+
+    .receitas {
+        display: grid;
+        grid-template-columns: repeat(3, 30.7%);
+        gap: 32px;
+        padding: 50px 32px;
+        background: #fff;
+        box-shadow: 0 0 50px rgb(0 0 0 / 6%);
+        border-radius: 0px 5px 5px 5px;
+
+        .receita {
+            background: #fff;
+            box-shadow: 0 0 30px rgb(0 0 0 / 5%);
+            border-bottom: 5px solid #f7c310;
+            border-radius: 5px;
+            height: 235px;
+            position: relative;
+
+            transition: all .3s;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            &:hover .overlayTexto {
+                opacity: 1;
+                transition: all .3s;
+            }
+
+            img {
+                height: 145px;
+                width: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                border-radius: 5px 5px 0 0;
+            }
+
+            .texto {
+                padding: 8px 16px;
+
+                h1 {
+                    font-size: 16px;
+                    font-weight: 600;
+                    text-align: center;
+                    color: #7f7f7f;
+                }
+            }
+
+            .overlayTexto {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all .3s;
+                opacity: 0;
+                background: rgb(255 198 0 / 88%);
+                border-radius: 5px 5px 0 0;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+
+                .texto {
+                    
+                    h1 {
+                        color: #fff;
+                        font-size: 18px;
+                    }
+
+                    .info {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 32px;
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-size: 17px;
+                        margin-top: 8px;
+
+                        time {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 8px;
+
+                            b {
+                                font-size: 32px;
+                                display: inherit;
+                            }
+                        }
+
+                        span {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            gap: 8px;
+                            
+                            b {
+                                font-size: 32px;
+                                display: inherit;
+                            }
+                        }
+                    }
+
+                    button {
+                        background: #fff;
+                        color: #c76d03;
+                        padding: 8px;
+                        border: none;
+                        border-radius: 30px;
+                        margin-top: 16px;
+                        width: 100%;
+
+                        transition: all .3s;
+
+                        &:hover {
+                            background: #c76d03;
+                            color: #fff;
+                        }
+                    }
+
+                    a {
+                        background: #fff;
+                        color: #c76d03;
+                        padding: 8px;
+                        display: block;
+                        text-align: center;
+                        border-radius: 30px;
+                        margin-top: 16px;
+
+                        transition: all .3s;
+
+                        &:hover {
+                            background: #c76d03;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
