@@ -1,0 +1,204 @@
+.categoryFeatured {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    
+    img {
+       width: 100%; 
+    }
+
+    .cover {
+        background: rgba(0, 0, 0, 0.637);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        
+        .text {
+
+            h1 {
+                text-align: center;
+                color: #f7c310;
+                font-weight: normal;
+                font-size: 45px;
+            }
+      
+            .infos {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 64px;
+                color: #fff;
+                font-size: 22px;
+                font-weight: 300;
+                text-transform: uppercase;
+                margin-top: 16px;
+                  
+                time {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 8px;
+
+                    b {
+                        display: inherit;
+                        font-size: 32px;
+                    }
+                }
+
+                span {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 8px;
+
+                    b {
+                        display: inherit;
+                        font-size: 32px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.conteudo {
+    padding: 60px 0;
+    max-width: 890px;
+    margin: 0 auto;
+
+    .links {
+        border-radius: 10px 10px 0 0;
+        display: inline-flex;
+        gap: 32px;
+        background: #f7c310;
+        box-shadow: 0 0 50px rgb(0 0 0 / 8%);
+        padding: 8px 32px;
+
+        li {
+            color: #ffa301;
+            list-style: circle;
+
+            transition: all .3s;
+
+            &:hover {
+               color: #c76d03; 
+               list-style: unset;
+            }
+        }
+
+        .active {
+            color: #c76d03;
+            font-weight: 600;
+            list-style: unset;
+        }
+    }
+
+    .receita {
+
+        .chamada {
+            padding: 32px;
+            background: #fff;
+            box-shadow: 0 0 50px rgb(0 0 0 / 6%);
+            border-radius: 0px 5px 5px 5px;
+
+            img {
+                height: 500px;
+                width: 100%;
+                max-width: 100%;
+                object-fit: cover;
+                margin-top: 16px;
+                border-radius: 5px;
+            }
+    
+            .title {
+                font-weight: 600;
+                font-size: 32px;
+                color: #f7c310;
+                text-align: left;
+                margin: 0;
+            }
+
+            p {
+                padding: 16px 0;
+                color: #464646;
+            }
+        }
+
+        h2 {
+            font-weight: normal;
+            color: #979797;
+            margin: 32px;
+            background: #f5f5f5;
+            border-radius: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 400;
+            color: #c76d03;
+            margin-bottom: 16px;
+        }
+
+        .ingredientes {
+            padding: 32px 48px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 50px rgb(0 0 0 / 6%);
+            margin-top: 32px;
+
+            li {
+                padding-bottom: 32px;
+                font-weight: 300;
+                color: #464646;
+
+                &:last-child {
+                    padding: 0;
+                }
+            }
+        }
+
+        .preparo {
+            padding: 32px;
+            border-radius: 5px;
+            background: #fff;
+            box-shadow: 0 0 50px rgb(0 0 0 / 6%);
+            margin-top: 32px;
+
+            ol {
+                counter-reset: customCount;
+
+                li {
+                    list-style: none;
+                    display: flex;
+                    align-items: center;
+                    padding-bottom: 32px;
+                    font-weight: 300;
+                    color: #464646;
+
+                    &:last-child {
+                        padding: 0;
+                    }
+                }
+
+                li::before {
+                    position: relative;
+                    margin-right: 16px;
+                    list-style: none;
+                    text-align: left;
+                    color: #c76d03;
+                    font-size: 35px;
+                    font-weight: 100;
+                    font-style: normal;
+                    font-family: system-ui;
+                    content: counter(customCount);
+                    counter-increment: customCount;
+                }
+            }
+        }
+    }
+}
